@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Product } from '../../app/models/product';
-import { Button } from '@mui/material';
 import ProductList from './ProductList';
 
 const Catalog = (props:any) => {
@@ -16,7 +15,7 @@ const Catalog = (props:any) => {
   return (
     <>
     <ProductList products={products} />
-    <Button>Add Product</Button>
+    {/* <Button>Add Product</Button> */}
     </>
   )
 }

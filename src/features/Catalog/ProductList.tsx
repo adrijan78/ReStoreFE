@@ -11,8 +11,8 @@ const ProductList = (props:Props) => {
     <Grid container spacing={4}>
         
         {props.products.map((product:any)=>{
-  return <Grid item xs={4}>
-          <ProductCard product={product} key={product.id} ></ProductCard>
+  return <Grid item  key={product.id} xs={4}>
+          <ProductCard product={product} ></ProductCard>
           </Grid>
         })}
         
