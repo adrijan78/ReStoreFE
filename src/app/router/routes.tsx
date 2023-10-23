@@ -6,6 +6,8 @@ import ProductDetails from "../../features/Catalog/ProductDetails";
 import AboutPage from "../../features/About/AboutPage";
 import ContactPage from "../../features/Contact/ContactPage";
 import NotFound from "../errors/NotFound";
+import BasketPage from "../../features/Basket/BasketPage";
+import CheckoutPage from "../../features/CheckOut/CheckoutPage";
 
 export const router = createBrowserRouter([
     {path:'/',element:<App/>,children:[
@@ -15,6 +17,8 @@ export const router = createBrowserRouter([
         {path:'about',element:<AboutPage/>},
         {path:'contact',element:<ContactPage/>},
         {path:'not-found',element:<NotFound/>},
+        {path:'basket',element:<BasketPage/>},
+        {path:'checkout',element:<CheckoutPage/>},
         {path:'*',element:<Navigate to="/not-found"/>},
     ]}
 ])
