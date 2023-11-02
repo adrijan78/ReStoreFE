@@ -8,17 +8,27 @@ import ContactPage from "../../features/Contact/ContactPage";
 import NotFound from "../errors/NotFound";
 import BasketPage from "../../features/Basket/BasketPage";
 import CheckoutPage from "../../features/CheckOut/CheckoutPage";
+import Register from "../../features/Account/Register";
+import Login from "../../features/Account/Login";
+import RequireAuth from "./RequireAuth";
 
 export const router = createBrowserRouter([
-    {path:'/',element:<App/>,children:[
+    
+    
+        {path:'/',element:<App/>,children:[
+
         {index:true,element:<HomePage/>},
+        {element:<RequireAuth/> ,children:[
+                {path:'checkout',element:<CheckoutPage/>},
+        ]},
         {path:'catalog',element:<Catalog/>},
         {path:'catalog/:id',element:<ProductDetails/>},
         {path:'about',element:<AboutPage/>},
         {path:'contact',element:<ContactPage/>},
         {path:'not-found',element:<NotFound/>},
-        {path:'basket',element:<BasketPage/>},
-        {path:'checkout',element:<CheckoutPage/>},
+        {path:'basket',element:<BasketPage/>},  
+        {path:'login',element:<Login/>},
+        {path:'register',element:<Register/>},
         {path:'*',element:<Navigate to="/not-found"/>},
     ]}
 ])
